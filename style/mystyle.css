@@ -1,0 +1,768 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+.main-content{
+	width: 100%;
+	max-width: 1200px;
+	margin: auto;
+}
+
+.container{
+	margin: auto;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+nav{
+	display: flex;
+	justify-content: space-around;
+	background-color: #02141a;
+}
+
+.icons-menu{
+	display: inline-block;
+	text-decoration: none;
+	margin: 10px;
+	color: #000;
+	margin-right: 100px;
+}
+
+.icons-menu li{
+	display: inline-block;
+	padding: 5px 20px 0px 0px;
+	color: #f0f0f0;
+	font-size: 15px;
+}
+
+.icons-text{
+	font-size: 15px;
+	padding: 10px 90px 0px 10px;
+	margin-left: 100px;
+	color: #f0f0f0;
+	font-family: 'Tangerine', cursive;
+}
+
+.navigation{
+	display: flex;
+	justify-content: space-around;
+	background-color: #02141a;
+	border-top: 1px solid #fff;
+	text-align: center;
+	align-items: center;
+}
+
+.navigation-menu li{
+	display: inline-block;
+	font-family: 'Oswail', sans-serif;
+	text-decoration: none;
+	padding: 30px 20px 30px 0px;
+	color: #f0f0f0;
+	font-size: 15px;
+}
+
+.navigation-link{
+	text-decoration: none;
+	color: #f0f0f0;
+	font-size: 15px;
+}
+
+.navigation-link.active{
+	color: #f0f0f0;
+	background-color: #91018c;
+	padding: 5px 10px;
+}
+
+.fa-pallet{
+	color: #f0f0f0;
+	font-size: 35px;
+}
+
+.intro-row{
+	display: flex;
+	justify-content: center;
+}
+
+.intro-content{
+	background-image: url('https://images.unsplash.com/photo-1511227682637-ddb98c43c42c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80');
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 400px;
+	text-align: center;
+	padding-top: 130px;
+	border-radius: 0 0 85% 85% / 30%;
+}
+
+.my-intro{
+	text-align: center;
+	color: #f0f0f0;
+	font-size: 25px;
+	font-weight: 900;
+	letter-spacing: 1px;
+	font-family: 'Oswail', sans-serif;
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
+	-webkit-transform: translate3d(0,0,0);
+}
+
+.wrapper{
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.wrapper-span{
+	color: #f0f0f0;
+	font-size: 27px;
+	letter-spacing: 1px;
+	font-weight: 900;
+	font-family: 'Oswail', sans-serif; 
+}
+
+.intro-text{
+	color: #f0f0f0;
+    font-size: 13px;
+    font-family: 'Oswail', sans-serif;
+	margin-top: 30px;
+}
+
+.wrapper:first-of-type{
+	animation: ani-one 6s infinite;
+}
+
+.wrapper:last-of-type{
+	width: 0;
+	animation: ani-three 6s infinite;
+}
+
+.wrapper:last-of-type wrapper-span{
+	margin-left: -360px;
+	animation: ani-two 7s infinite;
+	display: inline-block;
+}
+
+@keyframes ani-one{
+	0%{
+		opacity: 0;
+	}
+	20%{
+		opacity: 1;
+	}
+
+	80%{
+		opacity: 1;
+	}
+
+	100%{
+		opacity: 0;
+	}
+}
+
+@keyframes ani-two{
+	0%{
+		margin-left: -600px;
+	}
+	20%{
+		margin-left: -600px;
+	}
+	35%{
+		margin-left: 0;
+	}
+	100%{
+		margin-left: 0;
+	}
+}
+
+@keyframes ani-three{
+	0%{
+		opacity: 0;
+		width: 0;
+	}
+	20%{
+		opacity: 1;
+		width: 0;
+	}
+	30%{
+		width: 360px;
+	}
+	80%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+		
+	}
+}
+
+.buy-btn{
+	display: flex;
+	justify-content: center;
+}
+
+.btn-area {
+  width: 120px;
+  height: 60px;
+  margin-top: 30px;
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+.front-side{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #91018c; 
+}
+.front-side p {
+  font-size: 22px;
+  text-align: center;
+  line-height: 60px;
+  letter-spacing: .2em;
+}
+.front-side p a{
+  text-decoration: none;
+  color: #fff;
+}
+.back-side {
+  position: absolute;
+  width: 120px;
+  height: 60px;
+  top: -60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #019409;
+  transition: 1s;
+}
+.back-side p{
+  color: #000;
+  line-height: 60px;
+  text-align: center;
+  letter-spacing: .2em;
+  font-size: 22px;
+}
+
+.back-side p a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn-area:hover .back-side{
+  transform: rotate(360deg);
+  transition: 1s;
+  top: 0;
+}
+
+.iphone-image{
+	background-image: url('http://www.mod-gadget.com/wp-content/uploads/2017/12/Apple-music-iphone.jpg');
+	background-position: center;
+	background-size: cover;
+	width: 500px;
+	height: 350px;
+}
+
+.iphone-col{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	text-align: center;
+	align-content: center;
+	padding-top: 10px;
+	width: 100%;
+}
+
+.compare-text{
+	background-color: #019409;
+	width: 500px;
+	text-align: center;
+	padding: 20px;
+}
+
+.compare-text h1{
+	padding-top: 80px;
+	color: #f0f0f0;
+	font-family: 'Rochester', cursive;
+	margin-left: 40px;
+	margin-bottom: 30px;
+}
+
+.compare-text p{
+	color: #f0f0f0;
+	font-size: 15px;
+	font-family: 'Oswail', sans-serif;
+}
+
+.compare-btn{
+	display: flex;
+	justify-content: center;
+}
+
+.compare-area {
+  width: 200px;
+  height: 50px;
+  margin-top: 30px;
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+.my-front-side{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #db3c07; 
+}
+.my-front-side p {
+  font-size: 22px;
+  text-align: center;
+  line-height: 60px;
+  letter-spacing: .2em;
+}
+.my-front-side p a{
+  text-decoration: none;
+  color: #fff;
+}
+.my-back-side {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  top: -60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #91018c;   
+  transition: 1s;
+}
+.my-back-side p{
+  color: #000;
+  line-height: 60px;
+  text-align: center;
+  letter-spacing: .2em;
+  font-size: 22px;
+}
+
+.my-back-side p a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.compare-area:hover .my-back-side{
+  transform: rotate(360deg);
+  transition: 1s;
+  top: 0;
+}
+
+.icloud-header,
+.wheretobuy-header{
+	margin-top: 20px;
+	text-align: center;
+	font-family: 'Oswail', sans-serif;
+    letter-spacing: 1px;
+    font-size: 35px;
+    color: #db3c07;
+}
+
+.icloud-text{
+	font-size: 35px;
+    text-align: center;
+    font-family: 'Oswail', sans-serif;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    color: #f0f0f0;
+    margin-top: 90px;
+}
+
+.my-icloud-text{
+	padding: 30px 25px 25px 25px;
+    color: #f0f0f0;
+    font-size: 18px;
+}
+
+.icloud-col{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin-top: 30px;
+}
+
+.icloud-image{
+	background-image: url('https://images.idgesg.net/images/article/2018/02/apple_icloud_storage_cost_3x2_apple_logo_cloud_computing_illustration_thinkstock-100748384-large.jpg');
+	background-size: cover;
+	background-position: center;
+	width: 50%;
+	height: 500px;
+}
+
+.icloud-des{
+	width: 50%;
+	background-color: #019409;
+	text-align: center;
+}
+
+.games{
+	padding-top: 30px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.games-col{
+	background-image: url('https://steamcdn-a.akamaihd.net/steam/apps/465780/ss_394ffabf8123829bbf0572b22b46b6797532dc77.1920x1080.jpg?t=1546028431');
+	background-size: cover;
+	background-position: center;
+	width: 80%;
+	height: 350px;
+}
+
+.fa-apple{
+	font-size: 43px;
+	color: #f0f0f0;
+	margin-top: 90px;
+	margin-bottom: 30px;
+}
+
+.games-col p{
+	color: #fff;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.games-btn{
+	display: flex;
+	justify-content: center;
+}
+
+.games-area {
+  width: 200px;
+  height: 50px;
+  margin-top: 30px;
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+.games-front-side{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #91018c; 
+}
+.games-front-side p {
+  font-size: 22px;
+  text-align: center;
+  line-height: 60px;
+  letter-spacing: .2em;
+}
+.games-front-side p a{
+  text-decoration: none;
+  color: #fff;
+}
+.games-back-side {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  top: -60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #db3c07;    
+  transition: 1s;
+}
+.games-back-side p{
+  color: #000;
+  line-height: 60px;
+  text-align: center;
+  letter-spacing: .2em;
+  font-size: 22px;
+}
+
+.games-back-side p a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.games-area:hover .games-back-side{
+  transform: rotate(360deg);
+  transition: 1s;
+  top: 0;
+}
+
+.iphones-container{
+	display: inline-block;
+	text-align: center;
+	flex-wrap: wrap;
+	align-content: center;
+}
+
+.iphones-image{
+	width: 300px;
+	height: 250px;
+	background-position: center;
+	background-size: cover;
+	transition: all 0.3s ease-in-out;
+}
+
+.iphones-image:hover{
+	transform: scale(1.05); 
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.event-title{
+	font-size: 30px;
+	text-align: center;
+	margin-bottom: 20px;
+	font-family: 'Oswail', sans-serif;
+	letter-spacing: 2px;
+	color: #db3c07;
+}
+
+.iphones-model{
+	font-size: 15px;
+	text-align: center;
+	font-family: 'Oswail', sans-serif;
+	letter-spacing: 2px;
+	color: #db3c07;
+}
+
+.iphones-btn{
+	color: #fff;
+	background-color: #91018c;
+	padding: 15px 30px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 15px;
+	transition: all 0.3s ease-in-out;
+
+}
+
+.iphones-btn:hover{
+	background-color: #ff2e23;
+	color: #fff;
+	padding: 10px 20px;
+	cursor: pointer;
+}
+
+.my-iphone-image{
+	width: 100%;
+	height: 680px;
+	background-size: cover;
+	background-position: center;
+	margin-top: 40px;
+}
+
+.my-iphone-image:hover{
+	cursor: pointer;
+	opacity: .5;
+	transition: .9s;
+}
+
+.iphone-description{
+	padding: 25px;
+	color: #000;
+	font-size: 15px;
+	font-family: 'Oswail', sans-serif;
+}
+
+.iphone-image-name{
+	margin-top: 20px;
+	color: #db3c07;
+	font-family: 'Oswail', sans-serif;
+}
+
+.music-image{
+	background-image: url('https://www.lifewire.com/thmb/E6oM3pseNLFzh3uQhtjyqovOucU=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-990122246-1361c873efae4114b9d340dbf7c35948.jpg');
+	background-size: cover;
+	background-position: center;
+	width: 50%;
+	height: 350px;
+}
+
+.music-row{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	padding-top: 30px;
+	width: 100%;
+}
+
+.music-col{
+	background-color: #019409;
+	width: 50%;
+	color: #fff;
+	text-align: center;
+	padding: 120px 30px 0px 20px;
+}
+
+.fa-cc-apple-pay{
+	font-size: 40px;
+	letter-spacing: 2px;
+	margin-bottom: 30px;
+}
+
+.music-col p{
+	margin-bottom: 40px;
+	font-family: 'Oswail', sans-serif;
+	font-size: 15px;
+}
+.music-link{
+	color: #fff;
+	background-color: #91018c;
+	padding: 15px 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 15px;
+	transition: all 0.3s ease-in-out;
+
+}
+
+.music-link:hover{
+	background-color: #ff2e23;
+	color: #fff;
+	padding: 20px 30px;
+	cursor: pointer;
+}
+
+.ipads-container{
+	margin-top: 30px;
+	display: inline-block;
+	text-align: center;
+}
+
+.my-ipads-image{
+	width: 300px;
+	height: 250px;
+	background-position: center;
+	background-size: cover;
+}
+
+.my-ipads-image:hover{
+	cursor: pointer;
+	opacity: .5;
+	transition: .9s;
+}
+
+.ipads-description{
+	font-size: 15px;
+    text-align: center;
+    font-family: 'Oswail', sans-serif;
+    color: #db3c07;
+    font-weight: bold;
+}
+
+.ipads-name{
+	font-size: 20px;
+	font-weight: bold;
+	font-family: 'Rochester', cursive;
+}
+
+.mac-container{
+	display: inline-block;
+	text-align: center;
+	margin-top: 30px;
+}
+
+.my-mac-image{
+	width: 300px;
+	height: 250px;
+	background-position: center;
+	background-size: cover;
+	transition: all 0.3s ease-in-out;
+}
+
+.my-mac-image:hover{
+	transform: scale(1.05); 
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.parallax-image{
+	background-image: url('https://cdn.pixabay.com/photo/2016/09/26/00/15/apple-watch-1694985_960_720.jpg');
+	-webkit-background-size:cover;
+  	background-size:cover;
+  	background-position: center center;
+  	background-attachment:fixed;
+  	width: 100%;
+  	height: 300px;
+  	margin-top: 30px;
+  	margin-bottom: 30px;
+}
+
+.myparallax-image{
+	background-image: url('https://images.unsplash.com/photo-1558126319-c9feecbf57ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80');
+	-webkit-background-size:cover;
+  	background-size:cover;
+  	background-position: center center;
+  	background-attachment:fixed;
+  	width: 100%;
+  	height: 300px;
+  	margin-top: 30px;
+}
+
+.footer-row{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: center;
+	flex: 1;
+	background-color: #02141a;
+	margin-top: 30px;
+}
+
+.explore-col h1{
+	color: #f0f0f0;
+	font-family: 'Oswail', sans-serif;
+	letter-spacing: 2px;
+	font-size: 20px;
+	font-weight: bold;
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+
+.fa-arrow-right{
+	color: #f0f0f0;
+	font-size: 15px;
+	margin-bottom: 10px;
+}
+
+.footer-email{
+	width: 200px;
+	padding: 20px 30px;
+	height: 50px;
+	margin-bottom: 15px;
+}
+
+.subscribetion-btn{
+	text-decoration: none;
+	width: 200px;
+	font-family: 'Oswald', sans-serif;
+	color: #fff;
+	background-color: #db3c07;
+	height: 50px;
+	display: inline-block;
+	text-align: center;
+	line-height: 50px;
+	margin-bottom: 60px;
+}
+
+.copyright{
+	text-align: center;
+	padding: 20px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 13px;
+	background-color: #02141a;
+	color: #f0f0f0;
+	border-top: 2px solid #f0f0f0;
+}
+.copyright-name{
+	color: #db3c07;
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	font-weight: 800;
+	font-size: 13px;
+}
+
+
